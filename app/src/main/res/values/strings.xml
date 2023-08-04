@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">My Movies</string>
+    <string name="title_label">Movie Title:</string>
+    <string name="enter_title_label">Enter movie title here</string>
+    <string name="edit_title_label">Edit song title here</string>
+    <string name="genre_label">Genre:</string>
+    <string name="enter_genre_label">Enter genre here</string>
+    <string name="edit_genre_label">Edit genre here</string>
+    <string name="year_label">Year:</string>
+    <string name="enter_year_label">Enter year of release here</string>
+    <string name="edit_year_label">Edit year of release here</string>
+    <string name="rating_label">Rating:</string>
+    <string name="insert_label">Insert</string>
+    <string name="show_list_label">Show List</string>
+    <string name="g_rating">G</string>
+    <string name="pg_rating">PG</string>
+    <string name="pg13_rating">PG13</string>
+    <string name="nc16_rating">NC16</string>
+    <string name="m18_rating">M18</string>
+    <string name="r21_rating">R21</string>
+    <string name="movie_list_label">List of Movies</string>
+    <string name="update_label">update</string>
+    <string name="delete_label">delete</string>
+    <string name="cancel_label">cancel</string>
+    <string-array name="ratings">
+        <item>G</item>
+        <item>PG</item>
+        <item>PG13</item>
+        <item>NC16</item>
+        <item>M18</item>
+        <item>R21</item>
+    </string-array>
+    <string-array name="ratings2">
+        <item>Show All</item>
+        <item>G</item>
+        <item>PG</item>
+        <item>PG13</item>
+        <item>NC16</item>
+        <item>M18</item>
+        <item>R21</item>
+    </string-array>
+    <string name="show_rating_label">show all movies with this rating</string>
+    <string name="id_label">ID:</string>
+</resources>
