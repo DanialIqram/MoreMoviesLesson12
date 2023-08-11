@@ -10,19 +10,22 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class MovieListActivity extends AppCompatActivity {
 
     ListView lv;
-    Button btnShowRating;
+    Button btnShowRating, btnAddMovie;
     Spinner ratingsSpinner;
     ArrayList<Movie> movieList, movies;
     ArrayList<String> spinnerList;
     CustomAdapter moviesAdapter;
+    LinearLayout llNoMovie;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +62,17 @@ public class MovieListActivity extends AppCompatActivity {
                 loadMovies(ratingsSpinner.getSelectedItem().toString());
             }
         });
+
+        btnAddMovie = findViewById(R.id.btnAddMovie);
+        btnAddMovie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MovieListActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        llNoMovie = findViewById(R.id.llNoMovies);
     }
 
     @Override
@@ -77,6 +91,12 @@ public class MovieListActivity extends AppCompatActivity {
         movieList.clear();
         movieList.addAll(movies);
         moviesAdapter.notifyDataSetChanged();
+
+        if (movieList.size() == 0) {
+            llNoMovie.setVisibility(View.VISIBLE);
+        } else {
+            llNoMovie.setVisibility(View.GONE);
+        }
     }
 
     private void loadMovies(String rating) {
